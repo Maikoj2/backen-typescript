@@ -1,7 +1,7 @@
 import express, {  Application } from 'express';
 import cors from  'cors';
 import bodyParser from 'body-parser';
-import Path from '../pathresolverRoutes';
+import Path from '../../pathresolverRoutes';
 
 
  

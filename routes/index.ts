@@ -11,7 +11,9 @@ fs.readdirSync(__dirname).filter((fileOrDir) =>{
     // Verifica que sea un directorio antes de intentar leer su contenido
     if (fileOrDir !== 'index.js') {
             fs.readdirSync(`${__dirname}/${fileOrDir}`).filter((file) => {
-                const name = RemoveExtension(file);    
+                console.log(`./${ fileOrDir }/${ file }`);
+                const name = RemoveExtension(file); 
+                console.log(name);
                 router.use(`/${name}`,require(`./${ fileOrDir }/${ file }`).default);
         });
     }
